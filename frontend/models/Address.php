@@ -82,7 +82,4 @@ class Address extends \yii\db\ActiveRecord
             'update_at' => '修改时间',
         ];
     }
-
-    //获取所有的城市
-
 }

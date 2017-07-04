@@ -19,6 +19,7 @@ use yii\web\IdentityInterface;
  * @property integer $status
  * @property integer $create_at
  * @property integer $update_at
+ * @property integer $openid
  */
 class Members extends \yii\db\ActiveRecord implements IdentityInterface
 {
@@ -56,6 +57,7 @@ class Members extends \yii\db\ActiveRecord implements IdentityInterface
             ['password', 'compare', 'compareAttribute' => 'password_hash','message'=>'两次输入的密码必须一致'],
             [['username'],'unique'],
             [['tel'],'unique'],
+            [['openid'],'safe'],
             [['email','email'],'unique'],
 
         ];
